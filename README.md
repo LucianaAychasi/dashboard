@@ -1,4 +1,4 @@
-# dashboard
+# Dashboard sobre la calidad de aire en la municipalidad de Miraflores - Mes de Junio del 2021
 
 El proyecto de visualización del dataset "Monitoreo de calidad de aire QAIRA - [Municipalidad de Miraflores]" utilizando Streamlit Community Cloud y GitHub tiene como objetivo proporcionar una interfaz interactiva y accesible para explorar y analizar los datos de calidad del aire recopilados por la Municipalidad de Miraflores.
 
