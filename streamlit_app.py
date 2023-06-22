@@ -7,6 +7,8 @@ df = pd.read_excel(url)
 df['Fecha'] = pd.to_datetime(df['Fecha'], format='%d/%m/%Y %H:%M', errors='coerce')
 # Soltar filas con valores 'Fecha' faltantes
 df = df.dropna(subset=['Fecha'])
+# Convertir 'Humedad (%)' columnna a numerico
+df['Humedad (%)'] = pd.to_numeric(df['Humedad (%)'], errors='coerce')
 # Establecer 'Fecha' como índice
 df.set_index('Fecha', inplace=True)
 # Vuelva a muestrear los datos a la frecuencia por hora
