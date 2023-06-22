@@ -4,7 +4,9 @@ import plotly.express as px
 url = "https://www.datosabiertos.gob.pe/sites/default/files/13_Monitoreo_Junio_2021.xlsx"
 df = pd.read_excel(url)
 # Convertir la columna 'Fecha' al formato de fecha y hora
-df['Fecha'] = pd.to_datetime(df['Fecha'], format='%d/%m/%Y %H:%M')
+df['Fecha'] = pd.to_datetime(df['Fecha'], format='%d/%m/%Y %H:%M', errors='coerce')
+# Soltar filas con valores 'Fecha' faltantes
+df = df.dropna(subset=['Fecha'])
 # Establecer 'Fecha' como índice
 df.set_index('Fecha', inplace=True)
 # Vuelva a muestrear los datos a la frecuencia por hora
