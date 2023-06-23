@@ -21,12 +21,12 @@ fig.update_traces(line_color='#98EECC')
 st.plotly_chart(fig, use_container_width=True)
 
 st.markdown('### Temperatura ambiente')
-fig = px.line(df, x="Fecha", y="Temperatura (C)", title='Temperatura (C)', markers=True, text='Temperatura (C)')
+fig = px.line(df, x="Fecha", y="Temperatura (C°)", title='Temperatura (C°)', markers=True, text='Temperatura (C°)')
 fig.update_traces(line_color='#FFC93C')
 st.plotly_chart(fig, use_container_width=True)
 
-st.markdown('### Monoxido de carbono')
-fig = px.line(df, x="Fecha", y="CO (ug/m3)", title='Monoxido de carbono', markers=True, text='CO (ug/m3)')
+st.markdown('### Monóxido de carbono')
+fig = px.line(df, x="Fecha", y="CO (ug/m3)", title='Monóxido de carbono', markers=True, text='CO (ug/m3)')
 fig.update_traces(line_color='#9DB2BF')
 st.plotly_chart(fig, use_container_width=True)
 
