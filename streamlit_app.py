@@ -21,7 +21,7 @@ fig.update_traces(line_color='#98EECC')
 st.plotly_chart(fig, use_container_width=True)
 
 st.markdown('### Temperatura ambiente')
-fig = px.line(df, x="Fecha", y="Temperatura (C°)", title='Temperatura (C°)', markers=True, text='Temperatura (C°)')
+fig = px.line(df, x="Fecha", y="Temperatura (C)", title='Temperatura (C)', markers=True, text='Temperatura (C)')
 fig.update_traces(line_color='#FFC93C')
 st.plotly_chart(fig, use_container_width=True)
 
