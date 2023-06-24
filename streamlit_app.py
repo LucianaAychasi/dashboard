@@ -4,7 +4,7 @@ import plotly.express as px
 url = "https://www.datosabiertos.gob.pe/sites/default/files/13_Monitoreo_Junio_2021.xlsx"
 df = pd.read_excel(url)
 st.set_page_config(page_title="Dashboard", layout='centered', initial_sidebar_state='collapsed')
-st.subheader("Dashboard sobre la calidad de aire en la municipalidad de Miraflores - 2021")
+st.subheader("Dashboard sobre la calidad de aire en la municipalidad de Miraflores 2020 - 2021")
 df['Fecha'] = pd.to_datetime(df['Fecha'])
 df['Month'] = df['Fecha'].dt.month
 mes = ['Enero 2021', 'Febrero 2021', 'Marzo 2021', 'Abril 2021', 'Mayo 2021', 'Junio 2021', 'Julio 2020', 'Agosto 2020', 'Septiembre 2020', 'Octubre 2020', 'Noviembre 2020', 'Diciembre 2020']
