@@ -25,7 +25,7 @@ for i, url in enumerate(urls):
     df['Fecha'] = pd.to_datetime(df['Fecha'])
     df['Month'] = df['Fecha'].dt.month
     mes_seleccionado = st.selectbox("Seleccione el mes", selectbox_options)
-    mes_data = list(mes_mapeado.keys())[list(mes_mapeado.values()).index(mes_seleccionado)]
+    mes_data = mes.index(mes_seleccionado) + 1
     filtro_df = df[df['Month'] == mes_data]
     st.markdown('### Humedad ambiente')
     fig = px.line(filtro_df, x="Fecha", y="Humedad (%)", title='Humedad (%)', markers=True, text='Humedad (%)')
