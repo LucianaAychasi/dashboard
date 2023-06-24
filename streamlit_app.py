@@ -20,13 +20,13 @@ for i, url in enumerate(urls):
     dfs[url] = pd.read_excel(url)
     df = dfs[url]
     df['datetime'] = pd.to_datetime(df['fecha'])
-    df['Mes'] = df['Fecha'].dt.mes
+    df['Mes'] = df['datetime'].dt.mes
     mes = ['Julio 2020', 'Agosto 2020', 'Septiembre 2020', 'Octubre 2020', 'Noviembre 2020', 'Diciembre 2020', 'Enero 2021', 'Febrero 2021', 'Marzo 2021', 'Abril 2021', 'Mayo 2021', 'Junio 2021', ]
     mes_mapeado = {i: mes[i-1] for i in range(1, 13)}
     selectbox_options = [mes_mapeado[i] for i in range(1, 13)]
     mes_seleccionado = st.selectbox("Seleccione el mes", selectbox_options)
     mes_data = list(mes_mapeado.keys())[list(mes_mapeado.values()).index(mes_seleccionado)]
-    filtro_df = df[df['Month'] == mes_data]
+    filtro_df = df[df['Mes'] == mes_data]
     st.markdown('### Humedad ambiente')
     fig = px.line(filtro_df, x="Fecha", y="Humedad (%)", title='Humedad (%)', markers=True, text='Humedad (%)')
     fig.update_traces(line_color='#98EECC')
