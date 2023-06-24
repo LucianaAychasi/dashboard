@@ -24,7 +24,7 @@ fig.update_traces(line_color='#FFC93C')
 st.plotly_chart(fig, use_container_width=True)
 
 st.markdown('### Monoxido de carbono')
-fig = px.line(df, x="Fecha", y="CO (ug/m3)", title='Monoxido de carbono', markers=True, text='CO (ug/m3)')
+fig = px.line(filtro_df, x="Fecha", y="CO (ug/m3)", title='Monoxido de carbono', markers=True, text='CO (ug/m3)')
 fig.update_traces(line_color='#9DB2BF')
 st.plotly_chart(fig, use_container_width=True)
 
