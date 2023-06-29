@@ -10,6 +10,7 @@ La aplicación desarrollada proporciona visualizaciones interactivas, como gráf
 
 Para alojar el proyecto en la nube, se utiliza GitHub, una plataforma de desarrollo colaborativo y control de versiones. GitHub permite almacenar y gestionar el código fuente de la aplicación, así como facilitar su implementación en Streamlit Community Cloud.
 Link de la aplicación web desplegado en Streamlit Community Cloud: https://dashboard-aire.streamlit.app  
+
 INTEGRANTES
 1. Alarcón Arias, Julio Erick
 2. Aychasi Naupari, Luciana Andrea
