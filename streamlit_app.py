@@ -63,7 +63,6 @@ def main():
         elif mes_seleccionado.lower() == "junio":
             archivo = pd.ExcelFile("13_Monitoreo_Junio_2021.xlsx")
             ubicaciones.append("Óvalo de Miraflores")
-    archivos.extend([archivo] * len(ubicaciones))
     if archivos:
         st.subheader(
             f"Mediciones de Calidad de Aire - {mes_seleccionado.capitalize()} {anio}")
