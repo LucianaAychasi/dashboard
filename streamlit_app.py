@@ -23,7 +23,7 @@ def main():
     mes_seleccionado=st.sidebar.selectbox("Seleccione el mes", options=meses)
     archivos=[]
     ubicaciones=[]
-        if anio==2020:
+    if anio==2020:
         if mes_seleccionado.lower()=="julio":
             archivo=pd.ExcelFile("Monitoreo_julio.xlsx")
             archivos.append(archivo)
