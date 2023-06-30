@@ -58,7 +58,7 @@ def main():
             archivos.append(archivo)
             ubicaciones.append("Óvalo de Miraflores")
         elif mes_seleccionado.lower()=="febrero":
-            archivo = pd.ExcelFile("9_Monitoreo_Febrero_2021.xlsx")
+            archivo=pd.ExcelFile("9_Monitoreo_Febrero_2021.xlsx")
             archivos.append(archivo)
             ubicaciones.append("Óvalo de Miraflores")
         elif mes_seleccionado.lower() == "marzo":
