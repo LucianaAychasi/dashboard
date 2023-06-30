@@ -5,7 +5,7 @@ import plotly.express as px
 st.set_page_config(page_title="Dashboard", layout='wide',
                    initial_sidebar_state='auto')
 def procesar_archivo_excel(archivo):
-    dfs = []
+    dfs=[]
     for sheet_name in archivo.sheet_names:
         df = pd.read_excel(archivo, sheet_name=sheet_name)
         columnas_interes = ["Fecha", "CO (ug/m3)", "H2S (ug/m3)", "NO2 (ug/m3)", "O3 (ug/m3)",
