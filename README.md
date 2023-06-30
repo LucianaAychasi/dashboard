@@ -12,6 +12,7 @@ Para alojar el proyecto en la nube, se utiliza GitHub, una plataforma de desarro
 Link de la aplicación web desplegado en Streamlit Community Cloud: https://dashboard-aire.streamlit.app  
 
 INTEGRANTES
+
 1. Alarcón Arias, Julio Erick
 2. Aychasi Naupari, Luciana Andrea
 3. Poma Ñahuincopa, Carmen Alicia
