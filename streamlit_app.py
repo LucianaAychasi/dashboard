@@ -61,12 +61,12 @@ def main():
             archivo=pd.ExcelFile("9_Monitoreo_Febrero_2021.xlsx")
             archivos.append(archivo)
             ubicaciones.append("Óvalo de Miraflores")
-        elif mes_seleccionado.lower() == "marzo":
-            archivo = pd.ExcelFile("10_Monitoreo_Marzo_2021.xlsx")
+        elif mes_seleccionado.lower()=="marzo":
+            archivo=pd.ExcelFile("10_Monitoreo_Marzo_2021.xlsx")
             archivos.append(archivo)
             ubicaciones.append("Óvalo de Miraflores")
-        elif mes_seleccionado.lower() == "abril":
-            archivo = pd.ExcelFile("11_Monitoreo_Abril_2021.xlsx")
+        elif mes_seleccionado.lower()=="abril":
+            archivo=pd.ExcelFile("11_Monitoreo_Abril_2021.xlsx")
             archivos.append(archivo)
             ubicaciones.append("Óvalo de Miraflores")
         elif mes_seleccionado.lower() == "mayo":
