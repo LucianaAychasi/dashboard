@@ -28,20 +28,20 @@ def main():
             archivo=pd.ExcelFile("Monitoreo_julio.xlsx")
             archivos.append(archivo)
             ubicaciones.append("Óvalo de Miraflores")
-        elif mes_seleccionado.lower() == "agosto":
-            archivo = pd.ExcelFile("Monitoreo_agosto.xlsx")
+        elif mes_seleccionado.lower()=="agosto":
+            archivo=pd.ExcelFile("Monitoreo_agosto.xlsx")
             archivos.append(archivo)
             ubicaciones.append("Óvalo de Miraflores")
-        elif mes_seleccionado.lower() == "setiembre":
-            archivo1 = pd.ExcelFile("Monitoreo_setiembre_Bonilla.xlsx")
-            archivo2 = pd.ExcelFile("Monitoreo_setiembre_Ov.Miraflores.xlsx")
+        elif mes_seleccionado.lower()=="setiembre":
+            archivo1=pd.ExcelFile("Monitoreo_setiembre_Bonilla.xlsx")
+            archivo2=pd.ExcelFile("Monitoreo_setiembre_Ov.Miraflores.xlsx")
             archivos.append(archivo1)
             archivos.append(archivo2)
             ubicaciones.append(
                 "Complejo Deportivo Manuel Bonilla")
             ubicaciones.append("Óvalo de Miraflores")
-        elif mes_seleccionado.lower() == "octubre":
-            archivo = pd.ExcelFile("Monitoreo_octubre.xlsx")
+        elif mes_seleccionado.lower()=="octubre":
+            archivo=pd.ExcelFile("Monitoreo_octubre.xlsx")
             archivos.append(archivo)
             ubicaciones.append("Óvalo de Miraflores")
         elif mes_seleccionado.lower() == "noviembre":
