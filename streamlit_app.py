@@ -7,25 +7,25 @@ st.set_page_config(page_title="Dashboard", layout='wide',
 def procesar_archivo_excel(archivo):
     dfs=[]
     for sheet_name in archivo.sheet_names:
-        df = pd.read_excel(archivo, sheet_name=sheet_name)
-        columnas_interes = ["Fecha", "CO (ug/m3)", "H2S (ug/m3)", "NO2 (ug/m3)", "O3 (ug/m3)",
+        df=pd.read_excel(archivo, sheet_name=sheet_name)
+        columnas_interes=["Fecha", "CO (ug/m3)", "H2S (ug/m3)", "NO2 (ug/m3)", "O3 (ug/m3)",
                             "PM10 (ug/m3)", "PM2.5 (ug/m3)", "SO2 (ug/m3)", "Ruido (dB)",
                             "UV", "Humedad (%)", "Presion (Pa)", "Temperatura (C)"]
-        df = df[columnas_interes]
-        df = df.replace('-', np.nan)
-        df = df.fillna(0)
+        df=df[columnas_interes]
+        df=df.replace('-', np.nan)
+        df=df.fillna(0)
         dfs.append(df)
     return dfs
 def main():
-    anio = st.sidebar.radio("Seleccione el año", options=[2020, 2021])
-    meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
+    anio=st.sidebar.radio("Seleccione el año", options=[2020, 2021])
+    meses=['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
          'Agosto', 'Setiembre', 'Octubre', 'Noviembre', 'Diciembre']
-    mes_seleccionado = st.sidebar.selectbox("Seleccione el mes", options=meses)
-    archivos = []
-    ubicaciones = []
-    if anio == 2020:
-        if mes_seleccionado.lower() == "julio":
-            archivo = pd.ExcelFile("Monitoreo_julio.xlsx")
+    mes_seleccionado=st.sidebar.selectbox("Seleccione el mes", options=meses)
+    archivos=[]
+    ubicaciones=[]
+    if anio==2020:
+        if mes_seleccionado.lower()=="julio":
+            archivo=pd.ExcelFile("Monitoreo_julio.xlsx")
             archivos.append(archivo)
             ubicaciones.append("Óvalo de Miraflores")
         elif mes_seleccionado.lower() == "agosto":
